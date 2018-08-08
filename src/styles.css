@@ -1,1 +1,211 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+/*@import "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css";*/
+@import '~ngx-toastr/toastr.css';
+/*@import '~ngx-toastr/toastr-bs4-alert';*/
+
+.slogo {
+  background: url(assets/img/sprite.hepsiburada.svg) no-repeat;
+  background-position: 69.05444126074498% 26.062322946175637%;
+  width: 173px;
+  height: 30px;
+  font-size: 0;
+  display: block;
+  text-indent: -9999px;
+  margin-top: 8px;
+}
+
+.hsubject {
+  font-size: 20px;
+}
+
+.hvote {
+  font-weight: 100
+}
+
+.addLinkCont {
+  margin-top: 10px;
+
+  border-radius: 20px;
+  background: #f7f7f7;
+}
+
+.plusBtn {
+  padding: 20px 33px;
+  border: 1px solid;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 10%;
+  background: #ececec;
+}
+
+.linkCont {
+  line-height: 105px;
+}
+
+.vote_point {
+  font-size: 20px;
+  padding: 19px;
+  width: 95px;
+}
+
+.vlist .linkCont {
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.vlist .voteBtns {
+  /* bottom: 0;
+   position: absolute;*/
+}
+
+.vlist .vlink {
+  font-weight: 100;
+  color: grey;
+}
+
+.voteBtn {
+  cursor: pointer;
+}
+
+.cpointer {
+  cursor: pointer;
+}
+
+.pointlbl {
+  font-weight: 100;
+}
+
+.vlist .addLinkCont {
+  background: none;
+}
+
+.snone {
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+
+.pagination {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background: orange;
+  border-color: orange;
+  color: black;
+}
+
+.page-link {
+  color: black;
+}
+
+
+.toast-top-center {
+  top: 50px !important;
+  right: 0;
+  width: 100%;
+}
+
+
+.removeLink{
+  float: right;
+  margin-left: 15px;
+  width: 30px;
+  font-weight: bold;
+  background: red;
+  font-size: 34px;
+  border-radius: 46px;
+  text-align: center;
+  line-height: 25px;
+  height: 30px;
+  color: white;
+  /*display: none;*/
+  opacity: 0;
+}
+
+.removeLink.active{
+  display: block;
+}
+
+
+.parent:hover .child
+{
+  display: block;
+
+  -webkit-animation: fadeInFromNone 0.5s ease-out;
+  -moz-animation: fadeInFromNone 0.5s ease-out;
+  -o-animation: fadeInFromNone 0.5s ease-out;
+  animation: fadeInFromNone 0.5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

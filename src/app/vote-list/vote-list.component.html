@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="media addLinkCont" routerLink="/new">
+      <span class="mr-3 plusBtn">+</span>
+      <div class="media-body">
+        <h5 class="mt-0 linkCont">Submit A Link</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="col-md-6 offset-md-3 text-left" style="width: 285px;">
+    <div class="btn-group " dropdown>
+      <button dropdownToggle type="button" class="btn bg-light dropdown-toggle">
+        Order By ({{orderByType}})<span class="caret"></span>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" (click)="orderBy(1)">Most Voted (Z->A)</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" (click)="orderBy(0)">Less Voted (A->z)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div class="row vlist" *ngFor="let vlink of returnedArray">
+
+  <div class="col-md-6 offset-md-3">
+    <div class="media addLinkCont" (mouseover)="showDivWithHoverStyles(vlink.url)"
+         (mouseout)="showAllDivsWithDefaultStyles()">
+
+      <span class="mr-3 plusBtn vote_point"> {{vlink.vote}} <br/> <span class="pointlbl">POINTS</span></span>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-12 text-left">
+            <span class="mt-0 linkCont">{{vlink.name}} </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-left">
+            <span class="mt-0 vlink">{{vlink.url}} </span>
+          </div>
+        </div>
+        <div class="voteBtns">
+          <div class="row">
+            <div class="col-6">
+              <span class="voteBtn snone" (click)="vote(1,vlink.url)">
+                Up Vote &uarr;</span>
+            </div>
+            <div class="col-6">
+                <span class="voteBtn snone" (click)="vote(0,vlink.url)">
+                  Down Vote &darr;
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div [ngStyle]="hoveredDivId ===vlink.url? hoveredDivStyles : defaultDivStyles" class="removeLink snone cpointer" (click)="delRequest(vlink.url,vlink.name)">-</div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div class="content-wrapper">
+  <p class="content-item" *ngFor="let content of returnedArray">{{content}}</p>
+</div>-->
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <pagination *ngIf="links.length>5" style=" margin:0 auto;" [totalItems]="links.length" (pageChanged)="pageChanged($event)"
+                [itemsPerPage]="5"></pagination>
+  </div>
+</div>
+
+<hr/>
+

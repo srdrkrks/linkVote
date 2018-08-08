@@ -1,0 +1,30 @@
+<div class="text-left">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br/>
+      <span class="cpointer snone" routerLink="/list"> &larr; Return to List</span>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br/>
+      <h2>Add New Link</h2>
+
+      <div class="form-group">
+        <label for="linkName">Link Name:</label>
+        <input type="text" class="form-control" #linkName id="linkName" [(ngModel)]="linkn" placeholder="e.g. Alphabet">
+      </div>
+      <div class="form-group">
+        <label for="LinkUrl">Link URL:</label>
+        <input type="text" class="form-control" #linkUrl id="LinkUrl" [(ngModel)]="linku"  placeholder="e.g. http://abc.xyz">
+      </div>
+
+      <button type="submit" class="btn btn-primary float-right bg-dark" (click)="createLink(linkName.value,linkUrl.value)">ADD
+      </button>
+
+    </div>
+  </div>
+
+</div>
