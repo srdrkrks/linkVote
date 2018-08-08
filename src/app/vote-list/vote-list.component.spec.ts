@@ -5,6 +5,7 @@ import {PaginationModule} from 'ngx-bootstrap';
 import {LinkService} from '../service/link.service';
 import {Link} from '../model/link';
 import {NewLinkComponent} from '../new-link/new-link.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 describe('VoteListComponent', () => {
@@ -15,7 +16,7 @@ describe('VoteListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [VoteListComponent],
       providers: [LinkService],
-      imports: [PaginationModule.forRoot()]
+      imports: [HttpClientModule, PaginationModule.forRoot()]
     })
       .compileComponents();
   }));

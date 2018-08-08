@@ -11,6 +11,7 @@ import {OrderByPipe} from './pipe/orderByPipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     OrderByPipe
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     BsDropdownModule.forRoot(),

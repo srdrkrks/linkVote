@@ -7,6 +7,7 @@ import {ToastrModule, ToastrService} from 'ngx-toastr';
 import {FormsModule} from '@angular/forms';
 import {VoteListComponent} from '../vote-list/vote-list.component';
 import {PaginationModule} from 'ngx-bootstrap';
+import { HttpClientModule} from '@angular/common/http';
 
 describe('NewLinkComponent', () => {
   let component: NewLinkComponent;
@@ -16,7 +17,7 @@ describe('NewLinkComponent', () => {
     TestBed.configureTestingModule({
       declarations: [NewLinkComponent],
       providers: [LinkService],
-      imports: [PaginationModule.forRoot(), FormsModule, ToastrModule.forRoot({
+      imports: [HttpClientModule, PaginationModule.forRoot(), FormsModule, ToastrModule.forRoot({
         positionClass: 'toast-top-center',
         preventDuplicates: true,
       })]

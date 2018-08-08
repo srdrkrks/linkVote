@@ -8,6 +8,7 @@ import {NewLinkComponent} from './new-link/new-link.component';
 import {LinkService} from './service/link.service';
 import {FormsModule} from '@angular/forms';
 import {PaginationModule} from 'ngx-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 
 describe('AppComponent', () => {
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
       providers: [LinkService],
       imports: [
         FormsModule,
+        HttpClientModule,
         PaginationModule.forRoot(),
         RouterTestingModule.withRoutes(
           [
