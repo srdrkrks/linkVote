@@ -1,6 +1,6 @@
-# Link Vote
+# Link Vote Project
 
-Live Demo [http://linkvite.serdarkarakas.com](http://hepsiburada.serdarkarakas.com)
+Live Demo [http://www.serdarkarakas.com](http://www.serdarkarakas.com)
 
 Angular 6 Project with Unit Test
 
